@@ -1,7 +1,7 @@
-package jam101.week01.ciftci;
+package ch.hicoders.jam101.week01.ciftci;
 
-import jam101.week01.ciftlik.Inek;
-import jam101.week01.ciftlik.Tavuk;
+import ch.hicoders.jam101.week01.ciftlik.Inek;
+import ch.hicoders.jam101.week01.ciftlik.Tavuk;
 import java.util.Scanner;
 
 public class Ciftci {

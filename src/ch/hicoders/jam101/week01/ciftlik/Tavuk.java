@@ -1,6 +1,6 @@
-package jam101.week01.ciftlik;
+package ch.hicoders.jam101.week01.ciftlik;
 
-import jam101.week01.ciftci.Ciftci;
+import ch.hicoders.jam101.week01.ciftci.Ciftci;
 import java.util.Scanner;
 
 public class Tavuk {
