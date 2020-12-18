@@ -1,7 +1,6 @@
 package ch.hicoders.jam101.week02.kisi;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Ogrenci {
