@@ -25,13 +25,18 @@ public class Kod {
         Scanner scan = new Scanner(System.in);
         System.out.println("Suphelinin oldugu vagonu tahmin etmek icin 1-10 arasi bir vagon numrasi giriniz");
         tahminEdilenVagon = scan.nextInt();
-        /*System.out.println("tah :" + tahminEdilenVagon);
+        /* System.out.println("tah :" + tahminEdilenVagon);
         System.out.println("sp : " +getSuphelininSaklandigiVagon());*/
     }
 
     public void karsilastirma(){
         // 2.Kullanici maximum 4 denemede suphelinin oldugu vagonu tahmin etmesi gerekecektir.
         for(int i=0; i<6; i++) {
+             if(tahminEdilenVagon<=0||tahminEdilenVagon>10){
+                System.out.println("Hatali giris yaptiniz");
+                start();
+                count++;// 2.Kullanici maximum 4 denemede suphelinin oldugu vagonu tahmin etmesi gerekecektir.
+            }
             if (tahminEdilenVagon == getSuphelininSaklandigiVagon()) {
                 System.out.println("Tebrikler supheliyi yakaladiniz");
                 System.out.println("Tesekkurler");
@@ -50,10 +55,6 @@ public class Kod {
                 start();
                 count++;
 
-            }else if(tahminEdilenVagon<=0||tahminEdilenVagon>10){
-                System.out.println("Hatali giris yaptiniz");
-                start();
-                count++;// 2.Kullanici maximum 4 denemede suphelinin oldugu vagonu tahmin etmesi gerekecektir.
             }
 
             if(count==3){
@@ -74,9 +75,15 @@ public class Kod {
         }
     }
     //Kullanıcının kac defada bildiği ve puani (100 üzerinden) consola yazdırılacaktir.
-    public static void puan(){
-        if(count>1){
-            System.out.println(count + " Defada bildiniz " + " Puaniniz : "+(100/count));
-        }else{System.out.println("Ilk Defada bildiniz" + " Puaniniz : "+(100));}
+    public void puan(){
+        if(count>1) {
+            if (tahminEdilenVagon != getSuphelininSaklandigiVagon()) {
+                System.out.println("Uzgunuz... :(");
+            }else{
+                System.out.println(count + " Defada bildiniz " + " Puaniniz : " + (100 / count));
+            } }else{
+                System.out.println("Ilk Defada bildiniz" + " Puaniniz : " + (100));
+            }
+        }
     }
-}
+
