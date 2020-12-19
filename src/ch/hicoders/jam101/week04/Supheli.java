@@ -6,7 +6,7 @@ public class Supheli {
 
         Kod codes = new Kod();
 
-        //codes.supheli();
+       //codes.supheli();
         codes.start();
         codes.karsilastirma();
     }
