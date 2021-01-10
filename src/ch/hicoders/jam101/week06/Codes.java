@@ -7,14 +7,14 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Codes {
-    static String partOfBike;
-    static String adding1 = "ASLIAG_";
-    static String wantedWord ;
-    static String trimmedWord;
-    static LocalDate adding2 = LocalDate.now();
-    static List<String > parts = new ArrayList<>();
+     String partOfBike;
+     String adding1 = "ASLIAG_";
+     String wantedWord ;
+     String trimmedWord;
+     LocalDate adding2 = LocalDate.now();
+     List<String > parts = new ArrayList<>();
 
-    public static void enter(){//Sistemin baslangicinin yapildigi method
+    public void enter(){//Sistemin baslangicinin yapildigi method
         for(int i=0; i<=10;i++) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Bir Parca giriniz");
@@ -30,7 +30,7 @@ public class Codes {
     }
 
 
-    public static void cutNumbers(){//Sayilarin ve diger kullanilmayan characterlerin uzaklastirildigi method
+    public void cutNumbers(){//Sayilarin ve diger kullanilmayan characterlerin uzaklastirildigi method
         List<String> onlyChar = new ArrayList<>();
         for(int i=0; i<partOfBike.length();i++){
             String character = partOfBike.substring(i,i+1);
@@ -43,14 +43,14 @@ public class Codes {
     }
 
 
-    public static void reverse(){//Stringi tersine cevirrme methodu
+    public void reverse(){//Stringi tersine cevirrme methodu
         StringBuilder reversePartOfBike = new StringBuilder(trimmedWord);
         reversePartOfBike.reverse();
         trimmedWord = reversePartOfBike.toString();
     }
 
 
-    public static void adding(){//Stringi istenilen hale getirmek icin gereken eklentilerin yapildigi method
+    public void adding(){//Stringi istenilen hale getirmek icin gereken eklentilerin yapildigi method
         wantedWord = adding1+trimmedWord+adding2.toString().replace("-","");
     }
 }
