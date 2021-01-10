@@ -1,14 +1,12 @@
 package ch.hicoders.jam101.week06;
 
-import static ch.hicoders.jam101.week06.Codes.*;
-
 public class PartOfBike {
 
     public static void main(String[] args) {
-
-        enter();
-        cutNumbers();
-        reverse();
-        adding();
+        Codes codes = new Codes();
+            codes.enter();
+            codes.cutNumbers();
+            codes.reverse();
+            codes.adding();
     }
 }
