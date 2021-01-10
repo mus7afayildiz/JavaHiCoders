@@ -7,10 +7,8 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Codes {
-     String partOfBike;
+     String partOfBike,wantedWord,trimmedWord;
      String adding1 = "ASLIAG_";
-     String wantedWord ;
-     String trimmedWord;
      LocalDate adding2 = LocalDate.now();
      List<String > parts = new ArrayList<>();
 
@@ -43,7 +41,7 @@ public class Codes {
     }
 
 
-    public void reverse(){//Stringi tersine cevirrme methodu
+    public void reverse(){//Stringi tersine cevirme methodu
         StringBuilder reversePartOfBike = new StringBuilder(trimmedWord);
         reversePartOfBike.reverse();
         trimmedWord = reversePartOfBike.toString();
